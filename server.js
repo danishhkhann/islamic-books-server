@@ -35,6 +35,7 @@ app.use(cors({
 
 
 app.get('/', (req, res)=> res.send("API is Working"));
+app.get('/health', (req, res)=> res.status(200).json({ status: 'ok' }));
 app.use('/api/user', userRouter)
 app.use('/api/seller', sellerRouter)
 app.use('/api/product', productRouter)
